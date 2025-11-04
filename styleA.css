@@ -1,3 +1,31 @@
 *{font-family: Arial,serif;}
 html{background-color: gray;background-image: linear-gradient(to bottom,#8d8d8d,#3b3b3b);min-height: 1200px;}
-.rounded{padding: 1%;margin: 3% 1%;border-radius:10px;float: left;background-image: linear-gradient(to right, #30cc,#109daa)}
+.rounded{padding: 1% ;margin: 3% 20px;border-radius:10px;float: center;background-image: linear-gradient(to right, rgb(111, 112, 184),#2c757c);max-width: 900px;}
+.grid-three-column
+{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+.field
+{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+.emailCheck{padding: 1%;}
+
+.button
+{
+    background-color: #5b979c;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+}
+.actions
+{
+    display: flex;
+    justify-content: flex-end;
+}
+

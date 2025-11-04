@@ -8,15 +8,17 @@
   <link rel="stylesheet" href="styleA.css">
 </head>
 <body>
+
 <header class="site-header">
   <h1>Join LoneWolfesAlphaNation</h1>
   <p class="subtitle">Create your account.</p>
+  <input type="radio" name="step" id="slide1" class ="visually-hidden">
+  <input type="radio" name="step" id="slide2" class ="visually-hidden">
+  <input type="radio" name="step" id="slide3" class ="visually-hidden">
+  <input type="radio" name="step" id="slide4" class ="visually-hidden">
+
 </header>
 <main>
-<input type="radio" name="step" id="slide1" class ="visually-hidden">
-<input type="radio" name="step" id="slide2" class ="visually-hidden">
-<input type="radio" name="step" id="slide3" class ="visually-hidden">
-<input type="radio" name="step" id="slide4" class ="visually-hidden">
 
 <div class="progress">
     <div class="progressBar"></div>
@@ -30,16 +32,35 @@
     </ul>
 </div>
 
-<div class="grid three-column">
-  <div class="field">
+<div class="grid-three-column">
+  <div class="rounded field">
     <label for ="firstname"> Surname</label>
-    <input type="text" id="surname" name = sirname placeholder ="enter your sirname">
+    <input type="text" id="surname" name = surname placeholder ="Enter your Surname">
     <label for ="middlename"> Middlename</label>
-    <input type="text" id="middlename" name="middlename" placeholder="enter your middlename, if you have one">
-    <lable for="lastname">Lastname</lable>
-    <input type="text" id="lastname" name="lastname" placeholder=""
+    <input type="text" id="middlename" name="middlename" placeholder="Enter your Middlename">
+    <label for="lastname">Lastname</lable>
+    <input type="text" id="lastname" name="lastname" placeholder="Enter your Lastname">
+
+
   </div>
-  
+
+</div>
+
+<div class="grid"></div>
+<div class="rounded field">
+  <label for ="email"> Email</label>
+  <input type="text" id="email" name = email placeholder ="Enter your e-mail">
+  <label for="emailCheck">emailCheck</label>
+  <input type="checkbox" id="emailCheck" name="emailCheck" placeholder="this is my email">
+<!-- Align checkbox to left and text next saying "this is my email 👍" -->
+
+</div>
+
+
+
+
+<div class="actions">
+  <lable class="button" for="slide2" aria-label="button for step 2">Next</lable>
 </div>
 
 </main>
