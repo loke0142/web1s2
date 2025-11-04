@@ -1,0 +1,3 @@
+*{font-family: Arial,serif;}
+html{background-color: gray;background-image: linear-gradient(to bottom,#8d8d8d,#3b3b3b);min-height: 1200px;}
+.rounded{padding: 1%;margin: 3% 1%;border-radius:10px;float: left;background-image: linear-gradient(to right, #30cc,#109daa)}
