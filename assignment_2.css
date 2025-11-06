@@ -1,16 +1,23 @@
 *{font-family: Arial,serif;}
-html{background-color: gray;background-image: linear-gradient(to top, rgba(54, 98, 218, 0.432),#1ad9eb52);min-height: 1200px;}
-.site-header {
+html{
+    background-color: gray;
+    background-image: linear-gradient(to top, rgba(54, 98, 218, 0.432),#1ad9eb52);
+    min-height: 1200px;
+}
+
+.site-header{
     text-align: center;
     padding: 2rem 0;
     margin-bottom: 2rem;
 }
-.site-logo {
+
+.site-logo{
     display: block;
     margin: 0 auto 1rem;
     max-width: 150px;
     height: auto;
 }
+
 .rounded{
     padding: 2rem;
     margin: 2rem auto;
@@ -20,16 +27,15 @@ html{background-color: gray;background-image: linear-gradient(to top, rgba(54, 9
     width: 100%;
     box-sizing: border-box;
 }
-.grid-three-column
-{
+
+.grid-three-column{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-    
 }
 
-.field
-{
+
+.field{
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
@@ -47,6 +53,17 @@ input[type="date"] {
     border-radius: 6px;
     margin-top: 5px;
     width: 100%;
+}
+input[type="date"]{
+min-width: 10%;
+max-width: fit-content;
+}
+
+input[type=checkbox]{
+    transform: scale(2);
+}
+.emailCheck{
+    text-align: center;
 }
 
 input:invalid {
