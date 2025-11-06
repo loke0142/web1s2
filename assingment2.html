@@ -76,14 +76,13 @@
   <h2 class="step2-title">Security Information</h2>
 
   <div class="field">
-          <label for="password">Password *</label>
+          <label for="password">Password * (minimum 8 characters)</label>
           <input id="password" name="password" type="password"
                  minlength="8"
-                 pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}"
-                 title="Use 8+ characters with upper, lower, and a number."
-                 autocomplete="new-password" required>
-          <span class="error-message" id="password-error">The rules set are not met with the current password.</span>
-          <small>Min 8 chars, 1 upper, 1 lower, 1 number.</small>
+                 oninvalid="this.setCustomValidity('Password must be at least 8 characters long')"
+                 oninput="this.setCustomValidity('')"
+                 required>
+          <span class="error-message">Password must be at least 8 characters long</span>
         </div>
 
   <div class="field">
@@ -92,7 +91,6 @@
                  minlength="8"
                  title="Re-enter the same password."
                  autocomplete="new-password" required>
-          <span class="error-message" id="confirm-password-error">The passwords given do not match</span>
           <small>Please confirm your password.</small>
         </div>
       </div>
@@ -103,48 +101,4 @@
         <button type="submit" class="button">Submit</button>
       </div>
 </section>
-
-<script>
-  // Get password elements
-  const password = document.getElementById('password');
-  const confirmPassword = document.getElementById('confirmPassword');
-  const passwordError = document.getElementById('password-error');
-  const confirmPasswordError = document.getElementById('confirm-password-error');
-
-  // Password validation function
-  function validatePassword() {
-    const passwordValue = password.value;
-    const hasUpperCase = /[A-Z]/.test(passwordValue);
-    const hasLowerCase = /[a-z]/.test(passwordValue);
-    const hasNumber = /\d/.test(passwordValue);
-    const isLongEnough = passwordValue.length >= 8;
-
-    if (!hasUpperCase || !hasLowerCase || !hasNumber || !isLongEnough) {
-      passwordError.style.display = 'block';
-      password.setCustomValidity('Invalid password');
-    } else {
-      passwordError.style.display = 'none';
-      password.setCustomValidity('');
-    }
-  }
-
-  // Confirm password validation function
-  function validateConfirmPassword() {
-    if (password.value !== confirmPassword.value) {
-      confirmPasswordError.style.display = 'block';
-      confirmPassword.setCustomValidity('Passwords do not match');
-    } else {
-      confirmPasswordError.style.display = 'none';
-      confirmPassword.setCustomValidity('');
-    }
-  }
-
-  // Add event listeners
-  password.addEventListener('input', function() {
-    validatePassword();
-    if (confirmPassword.value) validateConfirmPassword();
-  });
-
-  confirmPassword.addEventListener('input', validateConfirmPassword);
-</script>
 </main>
