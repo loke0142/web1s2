@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <link rel="icon" type="image/x-icon" href="/images/logoicon.png">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Lone wolf nation creation</title>
+  <title>Lone Wolf Nation creation</title>
   <link rel="stylesheet" href="assignment_2.css">
 </head>
 <body>
@@ -13,8 +13,8 @@
   <!-- radio buttoms to show which slide you are on-->
 <header class="site-header">
   <img src="images/logoicon.png" alt="Lone Wolf Logo" class="site-logo">
-  <h1>Join LoneWolfesAlphaNation</h1>
-  <p class="subtitle">Create your account.</p>
+  <h1 class="outlined">Join LoneWolfesAlphaNation</h1>
+  <h3 class="subtitle outlined">Create your account.</h3>
   <input type="radio" name="step" id="slide1" class ="visually-hidden" checked> 
   <input type="radio" name="step" id="slide2" class ="visually-hidden">
 
@@ -49,6 +49,24 @@
         <input type="date" id="dob" name="dob" required>
         <span class="error-message" id="dob-error">Date of birth is required</span>
       </div>
+      <div class="">
+        <label for="sign">Favorite Star Sign</label>
+        <select name="sign" id="sign">
+        <option value="Aries">Aries</option>
+        <option value="Taurus">Taurus</option>
+        <option value="Gemini">Gemini</option>
+        <option value="Cancer">Cancer</option>
+        <option value="Leo">Leo</option>
+        <option value="Virgo">Virgo</option>
+        <option value="Libra">Libra</option>
+        <option value="Scorpio">Scorpio</option>
+        <option value="Sagittarius">Sagittarius</option>
+        <option value="Capricorn">Capricorn</option>
+        <option value="Aquarius">Aquarius</option>
+        <option value="Pisces">Pisces</option>
+        <option value="idk">idk idc tbh lol</option>
+      </select>
+      </div>
     </div>
     
     <div class="grid rounded field">
@@ -57,7 +75,7 @@
       <span class="error-message" id="email-error">Valid email is required</span>
       <label for="emailCheck">Confirm Email</label>
       <input type="checkbox" id="emailCheck" name="emailCheck">
-      <label for="emailCheck">this is my email 👍</label>
+      <label for="emailCheck">This is my email 👍</label>
       
     </div>
     

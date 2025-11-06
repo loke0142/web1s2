@@ -1,8 +1,12 @@
 *{font-family: Arial,serif;}
 html{
     background-color: gray;
-    background-image: linear-gradient(to top, rgba(54, 98, 218, 0.432),#1ad9eb52);
+    background-image: linear-gradient(to bottom, rgb(11, 26, 68),#1e5045);
     min-height: 1200px;
+}
+
+.outlined{
+    text-shadow: 1px 0px 4px #ffffff;
 }
 
 .site-header{
@@ -61,6 +65,11 @@ max-width: fit-content;
 
 input[type=checkbox]{
     transform: scale(2);
+}
+input[type=radio]{
+    transform: scale(1.5);
+    margin: 0% 1%;
+    
 }
 .emailCheck{
     text-align: center;
