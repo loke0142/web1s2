@@ -112,12 +112,20 @@
                  autocomplete="new-password" required>
           <small>Please confirm your password.</small>
         </div>
+        <div>
+          <p class="closedTos">Agree to our</p>
+          <input type="checkbox" class="toscheck" id="bnt">
+          <p class="tos">By opening this page you agree that all your provided information(submitted or not) will be used for our artificial inteligence data collection system for our own gain. By reading this page you agree to a full legal arbitration clause. By disagreeing to that you will be chased by our company police, and taken into captivity for more data extraction. </p>
+          <label for="btn" class="tosbutton"></label>
+        </div>
       </div>
       <div class="actions">
-        <!--working bakc button and fake Submit for now(Make external page that welcomes you into LoneWolfesAlphaNation) 
+        <!--working back button and fake Submit for now(Make external page that welcomes you into LoneWolfesAlphaNation) 
         lebron james picture-->
         <label class="button" for="slide1" aria-label="button for step 1">Back</label>
-        <button type="submit" class="button">Submit</button>
+        <form action="welcome.html">  
+          <button type="submit" class="button" href="welcome.html">Submit</button>
+        </form>
       </div>
 </section>
 </main>

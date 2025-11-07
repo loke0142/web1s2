@@ -4,6 +4,15 @@ html{
     background-image: linear-gradient(to bottom, rgb(11, 26, 68),#1e5045);
     min-height: 1200px;
 }
+.welcomepage{
+    background-image:url(images/wolf.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.welcometext{
+    color: 000000;
+    text-shadow: 1px 0px 8px #ffffff;
+}
 
 .outlined{
     text-shadow: 1px 0px 4px #ffffff;
@@ -66,6 +75,7 @@ max-width: fit-content;
 
 input[type=checkbox]{
     transform: scale(2);
+    display: inline;
 }
 input[type=radio]{
     transform: scale(1.5);
@@ -96,7 +106,10 @@ label {
     margin-bottom: 5px;
 }
 
-.emailCheck{padding: 1%;}
+.emailCheck{
+    padding: 1%;
+    display: inline;
+}
 
 .button
 {
@@ -106,12 +119,43 @@ label {
   font-weight: 700;
   cursor: pointer;
 }
+
+.tos{
+    display: none;
+}
+.closedTos{
+    display: inline;
+}
+.toscheck{
+    display: block;
+}
+.tosbutton{
+    position: relative;
+    padding: 0.5em;
+    background-color: #1c226e8c;
+    color: #ccc;
+    cursor: pointer;
+}
+.tosbutton::before{
+    content: "Terms Of Service";
+    
+}
+.toscheck:checked ~.tosbutton:before{
+    content: "Hahahahahahaha";
+}
+
+/* thi part needs a fix to show the Terms of Service properly */
+.tos:has~.tosbutton::before{
+    display: inline;
+}
+
 .actions
 {
     display: flex;
     justify-content: flex-end;
     gap: 5px;
     margin-top: 5px;
+    cursor: pointer;
 
 }
 /* the hidden steps for the radio button navigation */
